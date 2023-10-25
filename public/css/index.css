@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333;
+}
+
+h1 {
+    color: #fff;
+}
+
+button {
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#compte1 {
+    background-color: #4CAF50;
+}
+
+#compte2 {
+    background-color: #2196F3;
+}
+
+#compte3 {
+    background-color: #f44336;
+}
+#compte4 {
+    background-color: yellow ;
+}
