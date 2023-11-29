@@ -9,10 +9,11 @@
 <body>
     <h1>Menu principal</h1>
 
-    {{#each comptes}}
-    <button id="{{this}}" onclick="window.location.href='{{this}}'">{{this}}</button>
+    <div class="main-menu">
+    {{#each ids}}
+        <button id="compte{{this}}" onclick="window.location.href='compte/{{this}}'">compte {{this}}</button>
     {{/each}}
-    
+    </div>
     
 </body>
 </html>

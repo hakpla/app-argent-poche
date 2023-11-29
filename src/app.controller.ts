@@ -1,4 +1,4 @@
-import { Controller, Get, Render } from '@nestjs/common';
+import { Controller, Get, Param, Render } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -8,36 +8,18 @@ export class AppController {
   @Get()
   @Render('index')
   root() {
-    let comptes = [];
-    for (let i=1; i<=4; i++){
-      comptes.push("compte"+i);
+    let ids = [];
+    for (let i=1; i<=3; i++){
+      ids.push(i);
     }
-    
-    return { comptes: comptes};
+    return { ids: ids};
   }
 
-  @Get('compte1')
-  @Render('compte1')
-  compte1(){
-    return {};
-  }
-
-  @Get('compte2')
-  @Render('compte2')
-  compte2(){
-    return {};
-  }
-
-  @Get('compte3')
-  @Render('compte3')
-  compte3(){
-    return {};
-  }
-
-  @Get('compte')
+  @Get('compte/:id')
   @Render('compte')
-  compte(){
-    return {};
+  compte(@Param() params: any){
+    console.log(params)
+    return { id: params.id };
   }
   
 }
