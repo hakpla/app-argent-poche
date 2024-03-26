@@ -9,7 +9,7 @@ export class AppController {
   @Render('index')
   root() {
     let ids = [];
-    for (let i=1; i<=3; i++){
+    for (let i=1; i<=2; i++){
       ids.push(i);
     }
     return { ids: ids};
